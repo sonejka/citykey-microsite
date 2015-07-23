@@ -1,9 +1,10 @@
-$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "variables";
+@import "base";
+@import "form";
 
-// bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
 
+//if lt IE 10
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -11,8 +12,57 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-  background: #eee;
+//Header styles
+.main-header{
+  .navbar{
+    background: $color-white;
+    border: none;
+    min-height: 86px;
+    box-sizing: border-box;
+  }
+  .navbar-nav > li{
+    font-size: $font-size-small;
+
+  }
+  .navbar-default .navbar-nav > li > a{
+    color: $color-copy-gray2;
+  }
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus,
+  .nav li:hover > a,
+  .nav .open > a:hover,
+  .nav .open > a:focus,
+  .nav .open > a,
+  .nav .open > a:hover,
+  .nav .open > a:focus{
+    background-color: transparent;
+    color: $color-accent;
+  }
 }
+
+.heading-wrapper{
+  background: url("../images/heading_bg/pic1.jpg") no-repeat center;
+  background-size: cover;
+  color: $color-white;
+  text-shadow: -2px 4px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  min-height: 492px;
+}
+
+
+
+//Media quaries
+@media only screen and (max-width : 768px){
+  .heading-wrapper{
+    min-height: 712px;
+  }
+}
+
+
+
+
+
+
+
 
