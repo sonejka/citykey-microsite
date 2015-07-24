@@ -1,4 +1,6 @@
 $image_dir: '../images/';
+$icons_image_dir: '../images/icons/';
+$pictures_image_dir: '../images/pictures/';
 
 /*---------------------------------
     Colors
@@ -7,9 +9,11 @@ $color-accent:#d98637;
 
 $color-white:#fff;
 
+
 $color-light-gray1:#eee;
 $color-light-gray2:#e7e7e7;
 $color-light-gray3:#d7d7d7;
+$color-light-gray4:#a1a1a1;
 
 $color-copy-gray1:#959595;
 $color-copy-gray2:#b7b7b7;
@@ -39,27 +43,40 @@ $color-black:#121920;
   ---------------------------------*/
 
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
-$font-montserrat:"Montserrat";
-$font-lato:"Lato";
+$font-montserrat:"Montserrat", sans-serif;
+$font-lato:"Lato", sans-serif;
 
 
 
 //font sizes (at least the common ones)
 $font-size-small:12px;
 $font-size-normal:14px;
-//$font-size-large:;
-//$font-size-xlarge:;
+$font-size-large: 18px;
+$font-size-xlarge: 24px;
 $font-size-huge:36px;
 
 /*---------------------------------
     Mixins
   ---------------------------------*/
 
-
-
 /*---------------------------------
     Bootstrap variables
   ---------------------------------*/
+$link-color: $color-accent;
+$btn-default-color: $color-accent;
+$btn-default-bg:  transparent;
+$btn-default-border: $color-accent;
+
 $btn-info-color: $color-accent;
 $btn-info-bg: $color-white;
 $btn-info-border: $color-white;
+
+$btn-font-weight: 900;
+
+$modal-lg:                    800px !default;
+$modal-header-border-color: transparent;
+$modal-inner-padding:         10px 45px !default;
+$modal-title-padding:         40px 45px 10px !default;
+
+
+

@@ -11,8 +11,30 @@ h1{
   font-weight: bold;
   font-size: $font-size-huge;
 }
+
+h2{
+  font-family: $font-montserrat;
+  font-weight: bold;
+  font-size: $font-size-xlarge;
+  color: $color-accent;
+  padding: 10px 0;
+}
+
 .navbar{
   border-radius: 0;
   margin-bottom: 0;
 }
 
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: $font-size-small;
+}
+
+.modal-title {
+  color: $color-accent;
+  font-size: $font-size-huge;
+  font-family: $font-montserrat;
+  font-weight: 900;
+  text-align: center;
+}
