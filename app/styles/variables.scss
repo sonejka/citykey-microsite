@@ -1,4 +1,5 @@
 $image_dir: '../images/';
+
 /*---------------------------------
     Colors
   ---------------------------------*/
@@ -32,11 +33,12 @@ $color-black:#121920;
 ////black transparency, 50% opacity
 //$color-black-trans:rgba(0,0,0,.5);
 
+
 /*---------------------------------
     Fonts
   ---------------------------------*/
 
-
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 $font-montserrat:"Montserrat";
 $font-lato:"Lato";
 
@@ -53,3 +55,11 @@ $font-size-huge:36px;
     Mixins
   ---------------------------------*/
 
+
+
+/*---------------------------------
+    Bootstrap variables
+  ---------------------------------*/
+$btn-info-color: $color-accent;
+$btn-info-bg: $color-white;
+$btn-info-border: $color-white;

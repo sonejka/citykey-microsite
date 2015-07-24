@@ -1,9 +1,7 @@
-$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
-@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "variables";
 @import "base";
 @import "form";
-
+@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 //if lt IE 10
 .browsehappy {
