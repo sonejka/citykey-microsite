@@ -352,19 +352,15 @@ h2 .fa {
 .content-with-sidebar {
 //  background: $color-black;
   display: table;
-  margin: -15px;
+  margin: 0 -15px 0 -16px;
   .sidebar-nav-wrap {
     background: $color-black;
-//    float: left;
     width: 110px;
     display: table-cell;
     vertical-align: top;
   }
 
   .content {
-    background: #eee;
-//    float: left;
-//    width: calc(100% - 110px);
     display: table-cell;
   }
 
