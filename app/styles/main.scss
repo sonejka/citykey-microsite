@@ -1,7 +1,7 @@
 @import "variables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "base";
 @import "form";
-@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 //if lt IE 10
 .browsehappy {
@@ -17,7 +17,28 @@
     background: $color-white;
     border: none;
     min-height: 86px;
-    box-sizing: border-box;
+
+  }
+  .navbar > .container-fluid .navbar-brand{
+    margin-left: 20px;
+    margin-right: 20px;
+    height: inherit;
+    img{
+      display: inline-block;
+    }
+    .logo_mobile{
+      display: none
+    }
+  }
+  .navbar > .container-fluid .navbar-nav{
+    padding-top: 14px;
+  }
+  .navbar > .container-fluid .navbar-right{
+    text-transform: uppercase;
+    margin-right: 20px;
+  }
+  .guest-login.mobile{
+    display: none;
   }
   .navbar-nav > li{
     font-size: $font-size-small;
@@ -37,6 +58,38 @@
   .nav .open > a:focus{
     background-color: transparent;
     color: $color-accent;
+    font-weight: bolder;
+  }
+
+
+  .dropdown-menu{
+    min-width: 245px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 5px solid $color-accent;
+    background-color: transparent;
+    padding-top: 22px;
+    padding-bottom: 0;
+    li{
+      background-color: $color-white;
+      opacity: 0.9;
+      border-bottom: 1px solid $color-copy-gray3;
+      border-left: 2px solid transparent;
+      &:hover{
+        opacity: 0.95;
+        border-left: 2px solid $color-accent;
+        a{
+          font-weight: inherit;
+        }
+      }
+      a{
+        padding: 7px 10px 11px 20px;
+      }
+    }
+  }
+  .navbar-nav > .dropdown:hover .dropdown-menu{
+    display: block;
   }
 }
 
@@ -47,6 +100,72 @@
   text-shadow: -2px 4px 5px rgba(0, 0, 0, 0.5);
   text-align: center;
   min-height: 492px;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    font-size: 0;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .heading-content{
+    display: inline-block;
+    margin: 0 -10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+.baloon-btn{
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border: 2px solid $color-white;
+  border-radius: 50%;
+
+  &:before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid $color-white;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin-left: -7px;
+    margin-top: -8px;
+  }
+}
+
+.floating{
+  -webkit-animation-name: Floatingx;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+
+}
+
+@-webkit-keyframes Floatingx{
+  from {-webkit-transform:translate(0, 0px);}
+  65% {-webkit-transform:translate(0, 15px);}
+  to {-webkit-transform: translate(0, -0px);}
+}
+
+@-moz-keyframes Floating{
+  from {-moz-transform:translate(0, 0px);}
+  65% {-moz-transform:translate(0, 15px);}
+  to {-moz-transform: translate(0, -0px);}
 }
 
 /*------------------------------------*\
@@ -186,6 +305,65 @@
 
 //Media quaries
 @media only screen and (max-width : 768px){
+
+  //header styles
+  .main-header{
+    .navbar{
+      background-color: $color-accent;
+      min-height: 94px;
+    }
+    .navbar-toggle{
+      float: left;
+      border: none;
+      margin-left: 28px;
+      margin-top: 26px;
+      &:hover{
+        background-color: transparent;
+      }
+      &:focus{
+        background-color: transparent;
+      }
+      .icon-bar{
+        background-color: $color-white;
+        height: 4px;
+        width: 33px;
+      }
+    }
+    .navbar-brand{
+      float: none;
+      display: block;
+      position: relative;
+      .logo_main{
+        display: none;
+      }
+      img{
+        position: absolute;
+        left: 0;
+        margin-left: calc(100% / 2.5)
+      }
+    }
+    .guest-login.mobile{
+      display: block;
+      float: right;
+      margin-right: 36px;
+      svg{
+        width: 38px;
+        height: 41px;
+      }
+    }
+    .navbar-collapse{
+      border-top: none;
+      box-shadow: none;
+    }
+    .collapse.in{
+      .navbar-nav{
+        background-color: $color-white;
+      }
+    }
+  }
+
+
+  //heading text block
   .heading-wrapper{
     min-height: 712px;
   }
