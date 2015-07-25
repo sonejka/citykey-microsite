@@ -350,9 +350,8 @@ h2 .fa {
     SIDEBAR-NAV
 \*------------------------------------*/
 .content-with-sidebar {
-//  background: $color-black;
   display: table;
-  margin: 0 -15px 0 -16px;
+  width: 100%;
   .sidebar-nav-wrap {
     background: $color-black;
     width: 110px;
@@ -382,7 +381,6 @@ h2 .fa {
         }
       }
     }
-
 
   }
 }
