@@ -71,10 +71,19 @@ $btn-info-color: $color-accent;
 $btn-info-bg: $color-white;
 $btn-info-border: $color-white;
 
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $color-accent;
+$btn-primary-border:             $color-accent;
+
 $btn-font-weight: 900;
 
 $modal-lg:                    800px !default;
 $modal-header-border-color: transparent;
 $modal-inner-padding:         10px 45px !default;
 $modal-title-padding:         40px 45px 10px !default;
+
+$input-bg:                       #e4e7ed !default;
+$input-color:                    #a1a1a1 !default;
+$input-border:                   #e4e7ed !default;
+
 

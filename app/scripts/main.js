@@ -1,7 +1,19 @@
 // jshint devel:true
 window.onload = function() {
 
-  //$("#welcome-modal").modal();
+//  $("#welcome-modal").modal();
+
+    $( ".sidebar-nav-wrap" ).hover(function() {
+            $(".content-with-sidebar").toggleClass("sidebar-opened");
+//        $( ".shadow-box" ).animate({
+//            opacity: 1
+//        }, 1500 );
+    });
+
+    $( ".shadow-box" ).hover(function() {
+        $(".content-with-sidebar").toggleClass("sidebar-opened");
+    });
+
 
   $('#instagram-feed').pongstgrm({
     accessId:     '2121083481',
@@ -13,5 +25,7 @@ window.onload = function() {
     comments: false,
     effects:    "scaling"});
 
-}
 
+
+
+}

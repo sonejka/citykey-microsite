@@ -187,7 +187,7 @@
 /*------------------------------------*\
     MAIN SEARCH
 \*------------------------------------*/
-.search-section{
+.search-section {
 
 }
 
@@ -359,11 +359,14 @@ h2 .fa {
 .content-with-sidebar {
   display: table;
   width: 100%;
+  height: 100%;
+
   .sidebar-nav-wrap {
     background: $color-black;
     width: 110px;
     display: table-cell;
     vertical-align: top;
+    position: relative;
   }
 
   .content {
@@ -371,16 +374,35 @@ h2 .fa {
   }
 
   .sidebar-nav {
+    position: relative;
+    z-index: 20;
     margin: 0;
     padding: 20px 0;
     list-style-type: none;
     li {
-      padding: 20px 0;
+      outline: none !important;
+
+      a {
+        display: block;
+        text-decoration: none;
+        position: relative;
+        padding: 20px 0;
+        white-space: nowrap;
+        color: $color-white;
+        outline: none;
+        &:hover {
+          color: $color-accent;
+        }
+      }
+      span {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 80px;
+        @include translate(0, -50%);
+      }
       svg {
         height: 25px;
-        path {
-          fill: #323940;
-        }
       }
       &:hover {
         svg path {
@@ -389,6 +411,41 @@ h2 .fa {
       }
     }
 
+  }
+}
+
+.shadow-box {
+  display: none;
+}
+
+.content-with-sidebar.sidebar-opened {
+  position: relative;
+
+  .sidebar-nav li span {
+    display: inline;
+  }
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    opacity: 0.8;
+    background: $color-black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+
+  .shadow-box {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 275px;
+    background: $color-black;
   }
 }
 
@@ -401,6 +458,24 @@ h2 .fa {
     color: $color-light-gray4;
     font-size: $font-size-large;
     padding: 5px 0 10px;
+  }
+}
+
+.chat-modal {
+  .modal-header {
+    .modal-title {
+      text-align: left;
+    }
+    p {
+      padding-top: 10px;
+      text-align: justify;
+      font-size: $font-size-large;
+      color: #acacac;
+    }
+  }
+
+  .btn-primary {
+    margin: 10px 0;
   }
 }
 

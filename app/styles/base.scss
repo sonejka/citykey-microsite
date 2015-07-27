@@ -31,10 +31,21 @@ h2{
   font-size: $font-size-small;
 }
 
+.btn-primary {
+  font-size: $font-size-large;
+  font-family: $font-montserrat;
+  padding: 10px 20px;
+}
+
 .modal-title {
   color: $color-accent;
   font-size: $font-size-huge;
   font-family: $font-montserrat;
-  font-weight: 900;
+  font-weight: 700;
+  line-height: 1.1;
   text-align: center;
+}
+
+.form-control {
+  box-shadow: none;
 }
