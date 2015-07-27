@@ -1,0 +1,26 @@
+@import "_variables";
+/*------------------------------------*\
+    MAIN SEARCH
+\*------------------------------------*/
+.search-section{
+  .form-control{
+    font-size: $font-size-large;
+    color: $color-copy-gray3;
+    border-radius: 0;
+    border: none;
+    height: 82px;
+  }
+  .input-group-addon{
+    padding: 0;
+    input[type="submit"]{
+      border: none;
+      border-radius: 0;
+      background-color: $color-accent;
+      color: $color-white;
+      height: 80px;
+      width: 192px;
+      font-family: $font-montserrat;
+      font-size: $font-size-large;
+    }
+  }
+}
