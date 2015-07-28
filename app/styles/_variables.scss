@@ -58,6 +58,13 @@ $font-size-huge:36px;
 /*---------------------------------
     Mixins
   ---------------------------------*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
 
 /*---------------------------------
     Bootstrap variables
@@ -81,6 +88,7 @@ $modal-lg:                    800px !default;
 $modal-header-border-color: transparent;
 $modal-inner-padding:         10px 45px !default;
 $modal-title-padding:         40px 45px 10px !default;
+$modal-content-bg:               #f3f5f9;
 
 $input-bg:                       #e4e7ed !default;
 $input-color:                    #a1a1a1 !default;
