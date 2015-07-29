@@ -38,3 +38,15 @@
     }
   }
 }
+
+@media only screen and (max-width : 320px) {
+  .search-section{
+    .form-control{
+      font-size:$font-size-large;
+      padding-left: 10px;
+    }
+    .input-group-addon input[type="submit"]{
+      width: 112px;
+    }
+  }
+}
