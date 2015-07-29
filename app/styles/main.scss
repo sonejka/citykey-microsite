@@ -174,10 +174,21 @@
 /*------------------------------------*\
     COMMON CONTENT
 \*------------------------------------*/
-h2 .fa {
-  margin-left: 10px;
-  vertical-align: middle;
-  font-size: 120%;
+h2 {
+  .fa {
+    margin-left: 10px;
+    vertical-align: middle;
+    font-size: 120%;
+  }
+
+  a .fa {
+    color: $color-light-gray3;
+  }
+
+  a:hover .fa {
+    color: $color-accent;
+  }
+
 }
 
 /*------------------------------------*\
@@ -291,6 +302,7 @@ h2 .fa {
 .instagram-feed {
   & + .row {
     text-align: center;
+    padding-bottom: 30px;
   }
   .thumbnail {
     font-family: $font-montserrat;
@@ -441,14 +453,14 @@ h2 .fa {
   }
   .shadow-box {
     width: 275px;
-//    animation: abc .3s 1;
-//    -webkit-animation-fill-mode: forwards;
+    //    animation: abc .3s 1;
+    //    -webkit-animation-fill-mode: forwards;
   }
 
-//  @-webkit-keyframes abc {
-//    0%   { width: 1px; }
-//    100% { width: 275px; }
-//  }
+  //  @-webkit-keyframes abc {
+  //    0%   { width: 1px; }
+  //    100% { width: 275px; }
+  //  }
 }
 
 /*------------------------------------*\
@@ -563,9 +575,22 @@ h2 .fa {
   color: $color-light-gray4;
 }
 
+.row.welcome-block {
+  padding: 0 5%;
+  display: none;
+  h2 {
+    text-align: center;
+    font-size: $font-size-huge;
+  }
+  p {
+    color: $color-light-gray4;
+    font-size: $font-size-xlarge;
+  }
+}
+
 .welcome-modal {
   .modal-content {
-    background: $color-white;
+    background: #eee;
   }
   p {
     font-size: $font-size-large;
@@ -621,25 +646,25 @@ h2 .fa {
 /*------------------------------------*\
     FOOTER
 \*------------------------------------*/
-.footer{
+.footer {
   background-color: $color-accent;
   color: $color-white;
   height: 236px;
   padding: 56px 80px 0 67px;
   font-size: 11px;
-  a{
+  a {
     color: $color-white;
   }
-  .logo-footer{
+  .logo-footer {
     padding-top: 4px;
-    .logo{
+    .logo {
       display: block;
       width: 110px;
       height: 14px;
       background: url("../images/citykey_footer_logo.png") no-repeat center;
       background-size: 100%;
     }
-    p{
+    p {
       font-weight: bolder;
       padding-left: 21px;
       margin-bottom: 5px;
@@ -685,7 +710,6 @@ h2 .fa {
   }
 }
 
-
 //Media quaries
 @media only screen and (max-width : 992px) {
   .footer{
@@ -695,6 +719,9 @@ h2 .fa {
 }
 
 @media only screen and (max-width: 767px) {
+  .row.welcome-block {
+    display: block;
+  }
 
   //header styles
   .main-header {
