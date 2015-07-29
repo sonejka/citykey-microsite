@@ -5,12 +5,17 @@
 .search-section{
   .form-control{
     font-size: $font-size-large;
-    color: $color-copy-gray3;
+    color: $color-copy-gray1;
     border-radius: 0;
     border: none;
-    height: 82px;
+    height: 80px;
+    padding: 3px 10px 9px 49px;
+    //    @include placeholder {
+    //      color: $color-white;
+    //    }
   }
   .input-group-addon{
+    border: none;
     padding: 0;
     input[type="submit"]{
       border: none;
@@ -21,6 +26,15 @@
       width: 192px;
       font-family: $font-montserrat;
       font-size: $font-size-large;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .search-section{
+    .form-control{
+      font-size:$font-size-xlarge;
+      padding-left: 39px;
     }
   }
 }

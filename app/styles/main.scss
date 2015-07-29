@@ -1,5 +1,6 @@
 @import "_variables";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
+@import "keyframes";
 @import "base";
 @import "form";
 
@@ -46,19 +47,25 @@
   }
   .navbar-default .navbar-nav > li > a {
     color: $color-copy-gray2;
+    text-transform: uppercase;
   }
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus,
   .nav li:hover > a,
-  .nav .open > a:hover,
-  .nav .open > a:focus,
-  .nav .open > a,
-  .nav .open > a:hover,
-  .nav .open > a:focus {
+  .nav .dropdown  > a:hover,
+  .nav .dropdown  > a:focus,
+  .nav .dropdown  > a,
+  .nav .dropdown  > a:hover,
+  .nav .dropdown  > a:focus {
     background-color: transparent;
     color: $color-accent;
     font-weight: bolder;
+  }
+  .nav .open{
+    .dropdown-menu{
+      display: none;
+    }
   }
 
   .dropdown-menu {
@@ -110,9 +117,7 @@
   }
   .heading-content {
     display: inline-block;
-    //    margin: 0 -10px;
     text-align: center;
-    //    vertical-align: middle;
     width: 100%;
     @include translate(-50%, -50%);
     position: absolute;
@@ -147,47 +152,12 @@
 }
 
 .floating {
-  -webkit-animation-name: Floatingx;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-  -moz-animation-name: Floating;
-  -moz-animation-duration: 3s;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: ease-in-out;
+  animation-name: Floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
   margin-left: 30px;
   margin-top: 5px;
-
-}
-
-@-webkit-keyframes Floatingx {
-  from {
-    -webkit-transform: translate(0, 0px);
-  }
-  65% {
-    -webkit-transform: translate(0, 15px);
-  }
-  to {
-    -webkit-transform: translate(0, -0px);
-  }
-}
-
-@-moz-keyframes Floating {
-  from {
-    -moz-transform: translate(0, 0px);
-  }
-  65% {
-    -moz-transform: translate(0, 15px);
-  }
-  to {
-    -moz-transform: translate(0, -0px);
-  }
-}
-
-/*------------------------------------*\
-    MAIN SEARCH
-\*------------------------------------*/
-.search-section {
 
 }
 
@@ -619,18 +589,82 @@ h2 .fa {
   }
 }
 
-//Media quaries
-@media only screen and (max-width: 768px) {
-  .heading-wrapper {
-    min-height: 712px;
+/*------------------------------------*\
+    FOOTER
+\*------------------------------------*/
+.footer{
+  background-color: $color-accent;
+  color: $color-white;
+  height: 236px;
+  padding: 56px 80px 0 67px;
+  font-size: 11px;
+  a{
+    color: $color-white;
   }
-
-  .center-block-list {
-    display: none;
+  .logo-footer{
+    padding-top: 4px;
+    .logo{
+      display: block;
+      width: 110px;
+      height: 14px;
+      background: url("../images/citykey_footer_logo.png") no-repeat center;
+      background-size: 100%;
+    }
+    p{
+      font-weight: bolder;
+      padding-left: 21px;
+      margin-bottom: 5px;
+    }
+  }
+  .footer-nav{
+    .nav-list{
+      margin-right: 6%;
+      ul li{
+        margin-bottom: 4px;
+        a{
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+  .about-block{
+    padding-top: 54px;
+    text-align: right;
+    .copyright{
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+  .footer-social{
+    li a{
+      display: block;
+      width: 16px;
+      height: 30px;
+      margin-left: 5px;
+      background: url("../images/icons/social.png") no-repeat center -614px;
+    }
+    .twi a{
+      background-position: center -653px;
+    }
+    .insta a{
+      background-position: center -693px;
+    }
+    .tripadv a{
+      background-position: center -743px;
+      width: 30px;
+    }
   }
 }
 
+
 //Media quaries
+@media only screen and (max-width : 992px) {
+  .footer{
+    padding-left: 33px;
+    padding-right: 28px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
 
   //header styles
@@ -681,10 +715,24 @@ h2 .fa {
     .navbar-collapse {
       border-top: none;
       box-shadow: none;
-    }
-    .collapse.in {
-      .navbar-nav {
-        background-color: $color-white;
+      background: url("../images/heading_bg/mob_menu.png") no-repeat center;
+      background-size: cover;
+//      position: absolute;
+//      width: 70%;
+//      z-index: 1;
+//      top: 0;
+      > .nav{
+        > li > a{
+          text-transform: capitalize;
+          font-size: 32px;
+          padding: 32px 5px 32px 57px;
+        }
+      }
+      .nav > .dropdown > .dropdown-menu{
+        min-width: 100%;
+      > li > a{
+        padding: 7px 10px 11px 20px;
+      }
       }
     }
   }
@@ -718,6 +766,61 @@ h2 .fa {
   .yelpreviewimg {
     float: none !important;
     margin: 0 !important;
+  }
+
+  //  footer styles
+  .footer{
+    height: 422px;
+    position: relative;
+    padding: 0;
+    .footer-nav{
+      display: none;
+    }
+    .logo-footer{
+      position: absolute;
+      padding-top: 0;
+      text-align: center;
+      bottom: 150px;
+      z-index: 1;
+      p{
+        font-size: $font-size-xlarge;
+        padding-bottom: 11px;
+      }
+      .logo{
+        display: inline-block;
+        width: 241px;
+        height: 31px;
+      }
+    }
+    .about-block{
+      text-align: center;
+      padding-top: 74px;
+      .copyright{
+        font-size: $font-size-large;
+      }
+    }
+    .footer-social{
+      padding-bottom: 160px;
+      li a{
+        width: 58px;
+        height: 58px;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+      .fb a{
+        background-position: center 0;
+      }
+      .twi a{
+        background-position: center -140px;
+      }
+      .insta a{
+        background-position: center -289px;
+      }
+      .tripadv a{
+        background-position: center -460px;
+        width: 92px;
+      }
+    }
   }
 
 }
