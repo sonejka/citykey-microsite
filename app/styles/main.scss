@@ -133,6 +133,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    p{
+      font-size: $font-size-xlarge;
+    }
   }
 }
 
@@ -759,6 +762,11 @@ h2 {
         margin-left: calc(100% / 2.5);
       }
     }
+    .guest-login{
+      span svg{
+        display: none;
+      }
+    }
     .guest-login.mobile {
       display: block;
       float: right;
@@ -766,6 +774,9 @@ h2 {
       svg {
         width: 38px;
         height: 41px;
+      }
+      svg path {
+        fill: $color-white;
       }
     }
     .navbar-collapse {
@@ -789,6 +800,12 @@ h2 {
       > li > a{
         padding: 7px 10px 11px 20px;
       }
+      }
+    }
+    .navbar-fixed-top{
+      position: inherit;
+      .navbar-collapse {
+        max-height: inherit;
       }
     }
   }
@@ -892,21 +909,22 @@ h2 {
   .footer{
     .footer-social{
       li a{
-        width: 22px;
-        height: 22px;
+        width: 42px;
+        height: 42px;
+        background-size: 100%;
       }
       .fb a{
-        background-position: center -653px;
+        background-position: center 13px;
       }
       .twi a{
-        background-position: center -653px;
+        background-position: center -52px;
       }
       .insta a{
-        background-position: center -693px;
+        background-position: center -119px;
       }
       .tripadv a{
-        background-position: center -743px;
-        width: 30px;
+        background-position: center -238px;
+        width: 50px;
       }
     }
   }
