@@ -38,8 +38,8 @@
     text-transform: uppercase;
     margin-right: 20px;
   }
-  .guest-login{
-    svg{
+  .guest-login {
+    svg {
       width: 20px;
       height: 14px;
       vertical-align: -2px;
@@ -63,17 +63,17 @@
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus,
   .nav li:hover > a,
-  .nav .dropdown  > a:hover,
-  .nav .dropdown  > a:focus,
-  .nav .dropdown  > a,
-  .nav .dropdown  > a:hover,
-  .nav .dropdown  > a:focus {
+  .nav .dropdown > a:hover,
+  .nav .dropdown > a:focus,
+  .nav .dropdown > a,
+  .nav .dropdown > a:hover,
+  .nav .dropdown > a:focus {
     background-color: transparent;
     color: $color-accent;
     font-weight: bolder;
   }
-  .nav .open{
-    .dropdown-menu{
+  .nav .open {
+    .dropdown-menu {
       display: none;
     }
   }
@@ -138,7 +138,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    p{
+    p {
       font-size: $font-size-xlarge;
     }
   }
@@ -484,6 +484,39 @@ h2 {
   padding: 50px;
 }
 
+.helpful-links {
+  background: $color-white;
+  padding: 0 20px;
+  min-height: 80px;
+  h4 {
+    float: left;
+    margin: 20px 20px 0 0;
+  }
+  .list-inline {
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .btn-default {
+    color: $color-copy-gray2;
+    border-color: $color-light-gray3;
+  }
+
+  .btn-default:hover {
+    color: $color-accent;
+    border-color: $color-accent;
+  }
+
+}
+
+.get-direction-btn {
+  @include border-radius(0);
+  min-height: 80px;
+  .fa {
+    font-size: $font-size-xlarge;
+  }
+}
+
 .bordered-column-activity {
   background: $color-white;
   .right-border {
@@ -678,40 +711,40 @@ h2 {
       margin-bottom: 5px;
     }
   }
-  .footer-nav{
-    .nav-list{
+  .footer-nav {
+    .nav-list {
       margin-right: 6%;
-      ul li{
+      ul li {
         margin-bottom: 4px;
-        a{
+        a {
           letter-spacing: 2px;
         }
       }
     }
   }
-  .about-block{
+  .about-block {
     padding-top: 54px;
     text-align: right;
-    .copyright{
+    .copyright {
       text-transform: uppercase;
       letter-spacing: 2px;
     }
   }
-  .footer-social{
-    li a{
+  .footer-social {
+    li a {
       display: block;
       width: 16px;
       height: 30px;
       margin-left: 5px;
       background: url("../images/icons/social.png") no-repeat center -614px;
     }
-    .twi a{
+    .twi a {
       background-position: center -653px;
     }
-    .insta a{
+    .insta a {
       background-position: center -693px;
     }
-    .tripadv a{
+    .tripadv a {
       background-position: center -743px;
       width: 30px;
     }
@@ -719,8 +752,8 @@ h2 {
 }
 
 //Media quaries
-@media only screen and (max-width : 992px) {
-  .footer{
+@media only screen and (max-width: 992px) {
+  .footer {
     padding-left: 33px;
     padding-right: 28px;
   }
@@ -786,8 +819,8 @@ h2 {
         margin-left: calc(100% / 2.5);
       }
     }
-    .guest-login{
-      span svg{
+    .guest-login {
+      span svg {
         display: none;
       }
     }
@@ -808,25 +841,25 @@ h2 {
       box-shadow: none;
       background: url("../images/heading_bg/mob_menu.png") no-repeat center;
       background-size: cover;
-//      position: absolute;
-//      width: 70%;
-//      z-index: 1;
-//      top: 0;
-      > .nav{
-        > li > a{
+      //      position: absolute;
+      //      width: 70%;
+      //      z-index: 1;
+      //      top: 0;
+      > .nav {
+        > li > a {
           text-transform: capitalize;
           font-size: 32px;
           padding: 32px 5px 32px 57px;
         }
       }
-      .nav > .dropdown > .dropdown-menu{
+      .nav > .dropdown > .dropdown-menu {
         min-width: 100%;
-      > li > a{
-        padding: 7px 10px 11px 20px;
-      }
+        > li > a {
+          padding: 7px 10px 11px 20px;
+        }
       }
     }
-    .navbar-fixed-top{
+    .navbar-fixed-top {
       position: inherit;
       .navbar-collapse {
         max-height: inherit;
@@ -872,55 +905,66 @@ h2 {
     margin: 0 !important;
   }
 
+  //  helpful links
+  .helpful-links {
+    .list-inline, h4 {
+      text-align: center;
+      float: none;
+    }
+    .btn {
+      margin-bottom: 10px;
+    }
+  }
+
   //  footer styles
-  .footer{
+  .footer {
     height: 422px;
     position: relative;
     padding: 0;
-    .footer-nav{
+    .footer-nav {
       display: none;
     }
-    .logo-footer{
+    .logo-footer {
       position: absolute;
       padding-top: 0;
       text-align: center;
       bottom: 150px;
       z-index: 1;
-      p{
+      p {
         font-size: $font-size-xlarge;
         padding-bottom: 11px;
       }
-      .logo{
+      .logo {
         display: inline-block;
         width: 241px;
         height: 31px;
       }
     }
-    .about-block{
+    .about-block {
       text-align: center;
       padding-top: 74px;
-      .copyright{
+      .copyright {
         font-size: $font-size-large;
       }
     }
-    .footer-social{
+    .footer-social {
       padding-bottom: 160px;
-      li a{
+      li a {
         width: 58px;
         height: 58px;
         margin-left: 15px;
         margin-right: 15px;
       }
-      .fb a{
+      .fb a {
         background-position: center 0;
       }
-      .twi a{
+      .twi a {
         background-position: center -140px;
       }
-      .insta a{
+      .insta a {
         background-position: center -289px;
       }
-      .tripadv a{
+      .tripadv a {
         background-position: center -460px;
         width: 92px;
       }
@@ -944,24 +988,24 @@ h2 {
   }
 }
 
-@media only screen and (max-width : 320px) {
-  .footer{
-    .footer-social{
-      li a{
+@media only screen and (max-width: 320px) {
+  .footer {
+    .footer-social {
+      li a {
         width: 42px;
         height: 42px;
         background-size: 100%;
       }
-      .fb a{
+      .fb a {
         background-position: center 13px;
       }
-      .twi a{
+      .twi a {
         background-position: center -52px;
       }
-      .insta a{
+      .insta a {
         background-position: center -119px;
       }
-      .tripadv a{
+      .tripadv a {
         background-position: center -238px;
         width: 50px;
       }
