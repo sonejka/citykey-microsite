@@ -107,6 +107,11 @@
   .navbar-nav > .dropdown:hover .dropdown-menu {
     display: block;
   }
+
+  .nav-item-mobile {
+    display: none;
+  }
+
 }
 
 .heading-wrapper {
@@ -728,6 +733,25 @@ h2 {
 
   //header styles
   .main-header {
+    .nav-item-mobile {
+      display: block;
+
+      svg {
+        height: 50px;
+        width: 50px;
+        vertical-align: sub;
+        margin-right: 20px;
+        path {
+          fill: $color-copy-gray2;
+        }
+      }
+      a:hover {
+        svg path {
+          fill: $color-accent;
+        }
+      }
+    }
+
     .navbar {
       background-color: $color-accent;
       min-height: 94px;
@@ -903,6 +927,12 @@ h2 {
     }
   }
 
+}
+
+@media only screen and (max-width: 480px) {
+  .main-header .navbar-collapse > .nav > li > a {
+    padding-left: 30px;
+  }
 }
 
 @media only screen and (max-width : 320px) {
