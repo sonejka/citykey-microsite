@@ -196,7 +196,16 @@ h2 {
   a:hover .fa {
     color: $color-accent;
   }
+}
 
+.btn-default {
+  @include transition(background, ease-in, 0.5s);
+}
+
+.btn-default:hover {
+  color: $color-white !important;
+  border-color: $color-accent !important;
+  background: $color-accent !important;
 }
 
 /*------------------------------------*\
@@ -456,19 +465,12 @@ h2 {
   .content {
     &:before {
       display: block;
-
     }
   }
   .shadow-box {
     width: 275px;
-    //    animation: abc .3s 1;
-    //    -webkit-animation-fill-mode: forwards;
   }
 
-  //  @-webkit-keyframes abc {
-  //    0%   { width: 1px; }
-  //    100% { width: 275px; }
-  //  }
 }
 
 /*------------------------------------*\
@@ -478,10 +480,27 @@ h2 {
   @extend .heading-wrapper;
   background: url("../images/heading_bg/pic2.jpg") no-repeat center 100%;
   background-size: cover;
+  height: 515px;
 }
 
 .activity-block {
-  padding: 50px;
+  color: $color-light-gray4;
+  padding: 30px 50px;
+  line-height: 1.8;
+  h2 {
+    margin: 0;
+  }
+
+  h2 + p {
+    font-size: $font-size-large;
+  }
+
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .helpful-links {
@@ -493,7 +512,7 @@ h2 {
     margin: 20px 20px 0 0;
   }
   .list-inline {
-    margin: 0;
+    margin: 5px 0 0;
     padding: 20px 0;
   }
 
@@ -521,12 +540,17 @@ h2 {
   background: $color-white;
   .right-border {
     border-right: 1px solid #e9e9e9;
-    padding-bottom: 20px;
+    padding: 50px 40px 30px;
+    h2 {
+      margin: 0 20px 0 0;
+      float: left;
+      padding: 0;
+    }
   }
-  .right-border + .left-border {
+  .left-border {
     border-left: 1px solid #e9e9e9;
     margin-left: -1px;
-    padding-bottom: 20px;
+    padding: 30px 40px;
 
     h2 {
       color: $color-copy-gray2;
@@ -546,13 +570,14 @@ h2 {
 \*------------------------------------*/
 
 .activities-list {
-  padding: 0;
+  overflow: hidden;
+  padding: 20px 0 0;
   list-style-type: none;
 }
 
 .activity-item {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   img {
     width: 100%;
   }
@@ -575,8 +600,111 @@ h2 {
 }
 
 /*------------------------------------*\
+    CUSTOMIZED MAP
+\*------------------------------------*/
+
+.maps {
+  position: relative;
+  .info-bubble {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    min-height: 190px;
+    width: 375px;
+    background: $color-white;
+    color: $color-light-gray4;
+    box-shadow: 2.5px 4.33px 5px 0 rgba(0, 0, 0, 0.1);
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .info-bubble-header {
+    background: #f4f4f4;
+    padding: 10px 20px;
+    h2 {
+      font-size: $font-size-normal;
+      margin: 0;
+      padding: 5px 0;
+    }
+  }
+  .title {
+    font-weight: bold;
+    color: $color-accent;
+    border-right: 1px solid $color-light-gray1;
+    padding: 10px 20px 10px 35px;
+  }
+  .info-item {
+    padding: 10px 35px 10px 20px;
+    border-left: 1px solid $color-light-gray1;
+    margin-left: -1px;
+  }
+}
+
+.maps iframe {
+  pointer-events: none;
+}
+
+/*------------------------------------*\
+    BUTTON LIST
+\*------------------------------------*/
+.button-list {
+  padding: 10px 0 0;
+  a {
+    background: $color-copy-gray3 no-repeat center;
+    @include border-radius(50%);
+    background-size: 40% 40%;
+    height: 42px;
+    width: 42px;
+    display: inline-block;
+    outline: none;
+
+    @include transition(background-color, ease-in, 0.5s);
+
+    &.check {
+      background-color: $color-accent;
+    }
+
+    &.wishlist-btn {
+      background-image: url($icons_image_dir + "svg-icon-9.svg");
+    }
+    &.completed-btn {
+      background-image: url($icons_image_dir + "svg-icon-10.svg");
+    }
+    &.share-btn {
+      background-color: $color-accent;
+      background-image: url($icons_image_dir + "svg-icon-8.svg");
+    }
+  }
+}
+
+/*------------------------------------*\
+   SHARE BUTTON
+\*------------------------------------*/
+.fb-share-button {
+  top: -8px;
+  margin: 0 30px 0 15px;
+  @include scale(1.3)
+}
+
+/*------------------------------------*\
     CUSTOMIZED YELP WIDGET
 \*------------------------------------*/
+#yelpwidget {
+  max-width: 800px;
+}
+
+#yelpheader {
+  padding-top: 5px;
+}
+
+.yelpreview {
+  padding: 30px 0;
+  clear: both;
+}
+
 .yelpreviewimg {
   @include border-radius(50%);
   box-shadow: none !important;
@@ -612,6 +740,15 @@ h2 {
 /*------------------------------------*\
     MODALS
 \*------------------------------------*/
+
+.share-modal .modal-dialog {
+  transform: translate(-50%, -50%) !important;
+  top: 40% !important;;
+  left: 50% !important;;
+  position: absolute !important;
+  min-width: 280px;
+}
+
 .modal-content {
   color: $color-light-gray4;
 }
@@ -872,6 +1009,62 @@ h2 {
     min-height: 712px;
   }
 
+  // activity page
+  .read-more-modal .list-inline li {
+    padding: 10px 0 0;
+  }
+
+  .share-modal {
+    h4 {
+      font-size: 26px;
+    }
+    li {
+      display: block;
+      .fb-share-button {
+        margin: 0;
+      }
+    }
+  }
+
+  .bordered-column-activity .right-border {
+    padding: 30px 30px 0;
+    h2 {
+      float: none;
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+
+  .bordered-column-activity .left-border {
+    padding: 0 30px 30px;
+    background: $color-light-gray1;
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .heading-activity-pic {
+    height: 515px;
+    min-height: 0;
+  }
+
+  .activity-block {
+    padding: 20px 30px;
+
+    .activity-description {
+      border-top: 1px solid #ccc;
+      position: relative;
+      padding-top: 80px;
+      .button-list {
+        position: absolute;
+        top: 10px;
+        left: 0;
+      }
+    }
+  }
+
+  //center-block of homepage
+
   .center-block-list {
     display: none;
   }
@@ -899,10 +1092,21 @@ h2 {
     padding: 0 0 30px;
     text-align: center;
     border-bottom: 1px solid $color-copy-gray3;
+    &:last-of-type {
+      border: none;
+    }
   }
   .yelpreviewimg {
     float: none !important;
     margin: 0 !important;
+  }
+
+  #yelpheader {
+    clear: both;
+  }
+  #yelpstarrating {
+    float: none;
+    margin: 5px 0 0;
   }
 
   //  helpful links
@@ -969,6 +1173,13 @@ h2 {
         width: 92px;
       }
     }
+  }
+
+  .maps .info-bubble {
+    max-width: 280px;
+    top: auto;
+    bottom: 30px;
+    right: 30px;
   }
 
 }

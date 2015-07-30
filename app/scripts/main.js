@@ -35,4 +35,21 @@ window.onload = function () {
   });
 
 
+  $('.maps').click(function () {
+    $('.maps iframe').css("pointer-events", "auto");
+  });
+
+  $(".maps").mouseleave(function () {
+    $('.maps iframe').css("pointer-events", "none");
+  });
+
+  $('.wishlist-btn').click(function () {
+    $(this).toggleClass('check');
+  });
+
+  $('.completed-btn').click(function () {
+    $(this).toggleClass('check');
+  });
+
+
 }
