@@ -437,6 +437,13 @@ h2 {
           fill: $color-accent;
         }
       }
+
+      &.active a {
+        color: $color-accent;
+        svg path {
+          fill: $color-accent;
+        }
+      }
     }
 
   }
