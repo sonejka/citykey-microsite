@@ -1,9 +1,9 @@
 // jshint devel:true
 window.onload = function () {
 
-  //if ($( window ).width() > 767) {
-  //  $("#welcome-modal").modal();
-  //}
+  if ($( window ).width() > 767) {
+    $("#welcome-modal").modal();
+  }
 
 
   $('.sidebar-nav-wrap, .shadow-box').mouseenter(function () {
