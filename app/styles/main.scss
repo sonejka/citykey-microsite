@@ -176,12 +176,16 @@
   animation-timing-function: ease-in-out;
   margin-left: 30px;
   margin-top: 5px;
-
 }
 
 /*------------------------------------*\
     COMMON CONTENT
 \*------------------------------------*/
+
+body {
+  padding-top: 86px;
+}
+
 h2 {
   .fa {
     margin-left: 10px;
@@ -206,6 +210,10 @@ h2 {
   color: $color-white !important;
   border-color: $color-accent !important;
   background: $color-accent !important;
+}
+
+.pattern-bg {
+  background: url("../images/pattern_bg.jpg");
 }
 
 /*------------------------------------*\
@@ -742,6 +750,39 @@ h2 {
 
 #recentreviews {
   display: none;
+}
+
+/*------------------------------------*\
+    PERFECT DAY PAGE
+\*------------------------------------*/
+.heading-perfect-day {
+  @extend .heading-wrapper;
+  background: #aaa url("../images/heading_bg/pic4.jpg") no-repeat 0 100%;
+  background-size: cover;
+  .heading-content {
+    text-shadow: -2px 4px 5px rgba(0, 0, 0, 0.5);
+    p {
+      font-family: $font-montserrat;
+      font-size: 21px;
+    }
+  }
+}
+
+.perfect-day-content {
+  background: url("../images/pattern_bg.jpg");
+}
+
+.perfect-day-content .activities-list {
+  li:nth-of-type(even) {
+    margin-top: -200px;
+  }
+}
+
+.perfect-day-content .activities-list.mirror {
+  li:nth-of-type(even) {
+    margin-top: 200px;
+  }
+
 }
 
 /*------------------------------------*\
