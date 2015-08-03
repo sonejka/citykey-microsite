@@ -1091,6 +1091,7 @@ h2 {
   .wide-section {
     @extend .heading-wrapper;
     min-height: 330px;
+    margin-top: 54px;
     background: url("../images/pictures/pic-10.jpg") no-repeat center bottom;
     background-size: cover;
     .heading-content {
@@ -1201,8 +1202,8 @@ h2 {
       display: block;
 
       svg {
-        height: 50px;
-        width: 50px;
+        height: 46px;
+        width: 46px;
         vertical-align: sub;
         margin-right: 20px;
         path {
@@ -1276,17 +1277,54 @@ h2 {
       //      width: 70%;
       //      z-index: 1;
       //      top: 0;
+      .navbar-right{
+        margin-top: 30px;
+        padding-bottom: 30px;
+        .guest-login{
+          padding-top: 30px;
+          svg{
+            display: inline-block;
+            height: 46px;
+            width: 46px;
+            vertical-align: sub;
+            margin-right: 20px;
+            path {
+              fill: $color-copy-gray2;
+            }
+          }
+        }
+      }
+
       > .nav {
+        padding-left: 56px;
+        padding-right: 78px;
         > li > a {
           text-transform: capitalize;
           font-size: 32px;
-          padding: 32px 5px 32px 57px;
+          padding: 40px 5px 26px 2px;
+        }
+        li + li.nav-item-mobile{
+            border-top: 2px solid $color-copy-gray2;
+          margin-top: 26px;
+        }
+        .nav-item-mobile + .nav-item-mobile{
+          border-top: none;
+          margin-top: 0;
+        }
+        .nav-item-mobile > a{
+          padding-top: 38px;
+          padding-bottom: 1px;
         }
       }
       .nav > .dropdown > .dropdown-menu {
         min-width: 100%;
         > li > a {
           padding: 7px 10px 11px 20px;
+        }
+      }
+      .navbar-right{
+        li:first-child{
+          border-top: 2px solid $color-copy-gray2;
         }
       }
     }
@@ -1564,10 +1602,16 @@ h2 {
 }
 
 @media only screen and (max-width: 480px) {
+  .main-header .navbar-collapse > .nav {
+    padding-left: 4px;
+    padding-right: 8px;
+  }
   .main-header .navbar-collapse > .nav > li > a {
     padding-left: 30px;
     font-size: 28px;
   }
+
+
 
   .chat-modal {
     .btn-primary {
