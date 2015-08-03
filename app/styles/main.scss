@@ -491,17 +491,25 @@ h2 {
 /*------------------------------------*\
     ACTIVITY PAGE
 \*------------------------------------*/
+.activity-block-wrap {
+  display: table;
+}
+
 .heading-activity-pic {
   @extend .heading-wrapper;
   background: url("../images/heading_bg/pic2.jpg") no-repeat center 100%;
   background-size: cover;
-  height: 515px;
+  min-height: 515px;
+  display: table-cell;
+  float: none;
 }
 
 .activity-block {
   color: $color-light-gray4;
   padding: 30px 50px;
   line-height: 1.8;
+  display: table-cell;
+  float: none;
   h2 {
     margin: 0;
   }
@@ -698,6 +706,12 @@ h2 {
 /*------------------------------------*\
    SHARE BUTTON
 \*------------------------------------*/
+.share-modal {
+  h4 {
+    font-size: 28px;
+  }
+}
+
 .fb-share-button {
   top: -8px;
   margin: 0 30px 0 15px;
@@ -757,10 +771,11 @@ h2 {
 \*------------------------------------*/
 .heading-perfect-day {
   @extend .heading-wrapper;
-  background: #aaa url("../images/heading_bg/pic4.jpg") no-repeat 0 100%;
+  background: #aaa url("../images/heading_bg/pic4.jpg") no-repeat 100% 100%;
   background-size: cover;
   .heading-content {
-    text-shadow: -2px 4px 5px rgba(0, 0, 0, 0.5);
+    //    text-shadow: -2px 4px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: none;
     p {
       font-family: $font-montserrat;
       font-size: 21px;
@@ -800,6 +815,7 @@ h2 {
 .activities-list.right-shift {
   margin-bottom: 0;
   position: relative;
+  z-index: 1;
 
   &:before {
     content: '';
@@ -1200,7 +1216,7 @@ h2 {
       display: block;
       position: relative;
       .logo_main {
-        display: none;
+        display: none !important;
       }
       img {
         position: absolute;
@@ -1300,10 +1316,12 @@ h2 {
   .heading-activity-pic {
     height: 515px;
     min-height: 0;
+    display: block;
   }
 
   .activity-block {
     padding: 20px 30px;
+    display: block;
 
     .activity-description {
       border-top: 1px solid #ccc;
@@ -1374,17 +1392,57 @@ h2 {
     }
   }
 
-  .activities-list.left-shift {
-    li:nth-of-type(even) {
-      margin-top: 0;
+  .heading-perfect-day {
+    background-image: url("../images/heading_bg/pic5.jpg");
+    min-height: 707px;
+
+    .heading-content {
+      h1 {
+        font-size: 45px;
+      }
+      p {
+        font-size: 31px;
+      }
     }
   }
 
+  .perfect-day-btn-list.helpful-links {
+    display: none;
+  }
+
+  .activities-list.left-shift,
   .activities-list.right-shift {
-    padding-top: 0;
-    li:nth-of-type(odd) {
-      margin-top: 0;
+
+    &:before {
+      width: 2px;
     }
+
+    padding-top: 10px;
+    li:nth-of-type(odd),
+    li:nth-of-type(even) {
+      padding: 60px 30px;
+      margin: 0;
+
+      &:before {
+        right: auto;
+        left: 50%;
+        margin-left: -8px;
+        top: -10px;
+      }
+    }
+  }
+
+  .time-of-day {
+    [class*="col-"] {
+      padding: 0 20px;
+    }
+    &:before {
+      display: none;
+    }
+  }
+
+  .get-direction-btn {
+    font-size: 24px;
   }
 
   //  footer styles
