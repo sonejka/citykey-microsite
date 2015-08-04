@@ -133,7 +133,7 @@
   .heading-content {
     display: inline-block;
     text-align: center;
-    width: 100%;
+//    width: 100%;
     @include translate(-50%, -50%);
     position: absolute;
     top: 50%;
@@ -596,6 +596,7 @@ h2 {
 .activities-list {
   overflow: hidden;
   padding: 20px 0 0;
+  margin: 0;
   list-style-type: none;
 }
 
@@ -840,7 +841,6 @@ h2 {
 
 .activities-list.left-shift,
 .activities-list.right-shift {
-  margin-bottom: 0;
   position: relative;
   z-index: 1;
 
@@ -1318,6 +1318,15 @@ h2 {
     BREAKPOINT  ---  767
 \*------------------------------------*/
 @media only screen and (max-width: 767px) {
+
+  [class*="col-"] > .btn-default {
+    width: 100%;
+  }
+
+  .pattern-bg-mobile {
+    background: url("../images/pattern_bg.jpg");
+  }
+
   .row.no-padd > div {
     padding-right: 0;
     padding-left: 0;
@@ -1640,6 +1649,15 @@ h2 {
   }
 
   //  profile page
+  .profile-page-content {
+    .activities-list .col-md-12:first-child {
+      display: none;
+    }
+  }
+  .profile-page-content h2 {
+    text-align: center;
+    margin-top: 0;
+  }
   .profile-wrap {
     display: block;
 
@@ -1657,6 +1675,41 @@ h2 {
         @include border-top-radius(5px);
       }
     }
+
+    .user-info {
+      padding-bottom: 0;
+    }
+
+    .user-details {
+      position: static;
+      display: block;
+      height: auto;
+      width: auto;
+      margin: 40px -40px 0;
+      > [class*="col-"] {
+        padding: 30px 0;
+        display: block;
+        float: left;
+        &:first-child {
+          border-right: none;
+          border-bottom: 1px solid $color-light-gray3;
+        }
+      }
+
+      .list-inline {
+        margin: 0;
+        .fa {
+          font-size: $font-size-huge;
+          margin: 0 10px;
+        }
+      }
+
+      .list-inline svg {
+        width: 46px;
+        margin: 0 10px;
+      }
+    }
+
   }
 
   //  footer styles
@@ -1802,6 +1855,16 @@ h2 {
       width: 50px;
       height: 50px;
       margin-left: -25px;
+    }
+  }
+
+  .user-details {
+    > [class*="col-"] {
+      padding: 20px 0;
+      min-height: 140px;
+      &:first-child {
+        min-height: 0;
+      }
     }
   }
 }
