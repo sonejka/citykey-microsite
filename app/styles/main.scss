@@ -203,6 +203,7 @@ h2 {
 }
 
 .btn-default {
+  padding: 6px 30px;
   @include transition(background, ease-in, 0.5s);
 }
 
@@ -914,6 +915,116 @@ h2 {
 }
 
 /*------------------------------------*\
+    PROFILE PAGE
+\*------------------------------------*/
+.profile-page-content {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.profile-wrap {
+  margin: 30px 0;
+  display: table;
+  width: 100%;
+}
+
+.user-photo,
+.user-info {
+  display: table-cell;
+  float: none;
+  vertical-align: top;
+}
+
+.user-photo {
+  padding: 0;
+  border-right: 12px solid $color-accent;
+
+  img {
+    width: 100%;
+    @include border-left-radius(5px);
+  }
+}
+
+.user-info {
+  background: $color-white;
+  color: $color-copy-gray2;
+  box-shadow: 0.5px 0.866px 1px 0px rgba(0, 0, 0, 0.1);
+  @include border-right-radius(5px);
+  position: relative;
+  padding: 10px 40px 110px 40px;
+  h3 {
+    font-family: $font-montserrat;
+    font-size: $font-size-xlarge;
+    font-weight: bold;
+  }
+  p {
+    line-height: 1.7;
+    font-size: 16px;
+  }
+}
+
+.user-details {
+  display: table;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid $color-light-gray3;
+  height: 100px;
+  width: 100%;
+  margin: 0;
+
+  > [class*="col-"] {
+    display: table-cell;
+    float: none;
+    border-right: 1px solid $color-light-gray3;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-family: $font-montserrat;
+    font-size: $font-size-small;
+    padding: 0 10px;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  strong {
+    color: $color-accent;
+    font-size: 38px;
+    display: block;
+    line-height: 1.1;
+  }
+
+  .list-inline {
+    .fa {
+      font-size: $font-size-huge;
+      color: $color-light-gray3;
+      margin: 0 8px;
+      @include transition(color, ease-in, 0.5s);
+    }
+    .icon-citykey {
+      width: 46px;
+      height: 22px;
+      margin: 0 7px;
+      path {
+        @include transition(fill, ease-in, 0.5s);
+      }
+    }
+
+    a:hover {
+      .fa {
+        color: $color-accent;
+      }
+      .icon-citykey path {
+        fill: $color-accent;
+      }
+    }
+  }
+
+}
+
+/*------------------------------------*\
     MODALS
 \*------------------------------------*/
 
@@ -1091,7 +1202,7 @@ h2 {
   .wide-section {
     @extend .heading-wrapper;
     min-height: 330px;
-    margin-top: 54px;
+    margin: 54px 0 0;
     background: url("../images/pictures/pic-10.jpg") no-repeat center bottom;
     background-size: cover;
     .heading-content {
@@ -1154,6 +1265,10 @@ h2 {
 }
 
 //Media quaries
+
+/*------------------------------------*\
+    BREAKPOINT  ---  1200
+\*------------------------------------*/
 @media only screen and (max-width: 1200px) {
   .main-header .navbar .nav > li > a {
     padding: 10px 10px;
@@ -1165,8 +1280,18 @@ h2 {
     margin-right: 0;
     margin-left: 0;
   }
+
+  .user-details .list-inline .fa {
+    font-size: $font-size-xlarge;
+  }
+  .user-details .list-inline .icon-citykey {
+    width: 34px;
+  }
 }
 
+/*------------------------------------*\
+    BREAKPOINT  ---  992
+\*------------------------------------*/
 @media only screen and (max-width: 992px) {
   .main-header .navbar-brand {
     padding: 15px 0;
@@ -1178,12 +1303,20 @@ h2 {
     margin-right: 0;
   }
 
+  .user-details .list-inline .fa,
+  .user-details .list-inline .icon-citykey {
+    margin: 0;
+  }
+
   .footer {
     padding-left: 33px;
     padding-right: 28px;
   }
 }
 
+/*------------------------------------*\
+    BREAKPOINT  ---  767
+\*------------------------------------*/
 @media only screen and (max-width: 767px) {
   .row.no-padd > div {
     padding-right: 0;
@@ -1277,12 +1410,12 @@ h2 {
       //      width: 70%;
       //      z-index: 1;
       //      top: 0;
-      .navbar-right{
+      .navbar-right {
         margin-top: 30px;
         padding-bottom: 30px;
-        .guest-login{
+        .guest-login {
           padding-top: 30px;
-          svg{
+          svg {
             display: inline-block;
             height: 46px;
             width: 46px;
@@ -1303,15 +1436,15 @@ h2 {
           font-size: 32px;
           padding: 40px 5px 26px 2px;
         }
-        li + li.nav-item-mobile{
-            border-top: 2px solid $color-copy-gray2;
+        li + li.nav-item-mobile {
+          border-top: 2px solid $color-copy-gray2;
           margin-top: 26px;
         }
-        .nav-item-mobile + .nav-item-mobile{
+        .nav-item-mobile + .nav-item-mobile {
           border-top: none;
           margin-top: 0;
         }
-        .nav-item-mobile > a{
+        .nav-item-mobile > a {
           padding-top: 38px;
           padding-bottom: 1px;
         }
@@ -1322,8 +1455,8 @@ h2 {
           padding: 7px 10px 11px 20px;
         }
       }
-      .navbar-right{
-        li:first-child{
+      .navbar-right {
+        li:first-child {
           border-top: 2px solid $color-copy-gray2;
         }
       }
@@ -1506,6 +1639,26 @@ h2 {
     font-size: 24px;
   }
 
+  //  profile page
+  .profile-wrap {
+    display: block;
+
+    .user-photo,
+    .user-info {
+      display: block;
+    }
+
+    .user-photo {
+      border-right: 0;
+      border-bottom: 25px solid $color-accent;
+
+      img {
+        @include border-left-radius(0);
+        @include border-top-radius(5px);
+      }
+    }
+  }
+
   //  footer styles
   .footer {
     height: 422px;
@@ -1601,6 +1754,9 @@ h2 {
   }
 }
 
+/*------------------------------------*\
+    BREAKPOINT  ---  480
+\*------------------------------------*/
 @media only screen and (max-width: 480px) {
   .main-header .navbar-collapse > .nav {
     padding-left: 4px;
@@ -1610,8 +1766,6 @@ h2 {
     padding-left: 30px;
     font-size: 28px;
   }
-
-
 
   .chat-modal {
     .btn-primary {
@@ -1652,6 +1806,9 @@ h2 {
   }
 }
 
+/*------------------------------------*\
+    BREAKPOINT  ---  320
+\*------------------------------------*/
 @media only screen and (max-width: 320px) {
   .footer {
     .footer-social {
