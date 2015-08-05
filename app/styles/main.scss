@@ -541,6 +541,7 @@ h2 {
   }
 
   .btn-default {
+    padding: 6px 10px;
     color: $color-copy-gray2;
     border-color: $color-light-gray3;
   }
@@ -609,17 +610,19 @@ h2 {
 }
 
 .activity-item-desc {
+  line-height: 1.2;
   width: 100%;
-  padding: 20px;
+  padding: 10px 15px 15px;
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url($image_dir + "activity-desc-bg.png") repeat-x 0 100%;
+  background: url($image_dir + "activity-desc-bg.png") repeat-x 0 center;
   color: $color-white;
   h5 {
     font-family: $font-montserrat;
     font-size: $font-size-large;
     margin-bottom: 0;
+    padding-bottom: 5px;
     color: $color-white;
   }
 }
@@ -920,12 +923,31 @@ h2 {
 .profile-page-content {
   max-width: 1100px;
   margin: auto;
+  padding-top: 60px;
+  h2 {
+    margin: 10px 0 0;
+  }
+  .activity-item {
+    margin: 0 10px 50px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,0.1);
+    }
+  }
 }
 
 .profile-wrap {
-  margin: 30px 0;
+  margin: 0;
   display: table;
   width: 100%;
+  background: $color-white;
+  box-shadow: 0.5px 0.866px 1px 0px rgba(0, 0, 0, 0.1);
+  @include border-radius(5px);
+  margin-bottom: 20px;
 }
 
 .user-photo,
@@ -946,10 +968,10 @@ h2 {
 }
 
 .user-info {
-  background: $color-white;
+
+
+
   color: $color-copy-gray2;
-  box-shadow: 0.5px 0.866px 1px 0px rgba(0, 0, 0, 0.1);
-  @include border-right-radius(5px);
   position: relative;
   padding: 10px 40px 110px 40px;
   h3 {
