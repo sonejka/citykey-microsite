@@ -1924,6 +1924,10 @@ h2 {
   }
   // header
   .main-header {
+
+    .dropdown-menu {
+      padding-top: 0;
+    }
     .navbar {
       min-height: 40px;
       > .container-fluid .navbar-brand {
@@ -1977,7 +1981,6 @@ h2 {
           height: 26px;
           width: 26px;
         }
-
       }
     }
 
@@ -2024,7 +2027,7 @@ h2 {
       > [class*="col-"] {
         padding: 7px 0;
         min-height: 74px;
-        font-size: 11px;
+        font-size: 10px;
         &:first-child {
           min-height: 0;
         }
@@ -2053,6 +2056,22 @@ h2 {
       padding-bottom: 60px;
       li a {
         margin: 0;
+        width: 42px;
+        height: 42px;
+        background-size: 100%;
+      }
+      .fb a {
+        background-position: center 13px;
+      }
+      .twi a {
+        background-position: center -52px;
+      }
+      .insta a {
+        background-position: center -119px;
+      }
+      .tripadv a {
+        background-position: center -238px;
+        width: 50px;
       }
     }
     .logo-footer {
@@ -2075,27 +2094,6 @@ h2 {
     BREAKPOINT  ---  320
 \*------------------------------------*/
 @media only screen and (max-width: 320px) {
-  .footer {
-    .footer-social {
-      li a {
-        width: 42px;
-        height: 42px;
-        background-size: 100%;
-      }
-      .fb a {
-        background-position: center 13px;
-      }
-      .twi a {
-        background-position: center -52px;
-      }
-      .insta a {
-        background-position: center -119px;
-      }
-      .tripadv a {
-        background-position: center -238px;
-        width: 50px;
-      }
-    }
-  }
+
 }
 
