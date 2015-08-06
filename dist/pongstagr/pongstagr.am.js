@@ -133,7 +133,7 @@
       video += '<button type="button" class="btn btn-lg" id="play-pause"><i class="glyphicon glyphicon-play"></i></button>'
       video += '<button type="button" class="btn btn-lg" id="mute"><i class="glyphicon glyphicon-volume-up"></i></button>'
 
-      var modal = '<div id="' + options.data.id + '" class="modal fade">'
+      var modal = '<div id="' + options.data.id + '" class="modal instagram-modal fade">'
       modal += '  <div class="modal-dialog">'
       modal += '    <div class="modal-content">'
       modal += '      <div class="modal-body">'
@@ -387,7 +387,12 @@
           , opt: options
         })
         break
-
+      case 'specific_user':
+        ajaxdata({
+          url: apiurl + options.userId + '/media/recent'  + '?access_token=' + options.accessToken
+          , opt: options
+        })
+        break
       default:
         ajaxdata({
           url: 'https://api.instagram.com/v1/tags/' + options.show + '/media/recent' + rcount

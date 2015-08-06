@@ -280,13 +280,13 @@
   opacity: 0;
 }
 
-@include transition(opacity 200ms ease);
+/*@include transition(opacity 200ms ease);*/
 
 .media-column > img.fade {
   opacity: 1;
 }
 
-@include transition(opacity 200ms ease);
+/*@include transition(opacity 200ms ease);*/
 
 .media-comment {
   position: relative;

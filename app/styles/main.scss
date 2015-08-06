@@ -935,7 +935,7 @@ h2 {
       position: absolute;
       height: 100%;
       width: 100%;
-      background: rgba(0,0,0,0.1);
+      background: rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -968,8 +968,6 @@ h2 {
 }
 
 .user-info {
-
-
 
   color: $color-copy-gray2;
   position: relative;
@@ -1049,6 +1047,27 @@ h2 {
 /*------------------------------------*\
     MODALS
 \*------------------------------------*/
+.instagram-modal .modal-dialog {
+  width: auto;
+  max-width: 800px;
+
+  .modal-body {
+    padding: 10px;
+  }
+
+  .media {
+    margin-top: 10px;
+    > .thumbnail {
+      padding: 5px !important;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .media-heading {
+      padding: 0;
+    }
+  }
+}
 
 .share-modal .modal-dialog {
   transform: translate(-50%, -50%) !important;
@@ -1474,6 +1493,7 @@ h2 {
         .nav-item-mobile + .nav-item-mobile {
           border-top: none;
           margin-top: 0;
+          padding-top: 0;
         }
         .nav-item-mobile > a {
           padding-top: 38px;
@@ -1493,15 +1513,15 @@ h2 {
       }
     }
     .navbar-fixed-top {
-//      position: inherit;
+      //      position: inherit;
       position: fixed;
       .navbar-collapse {
-//        max-height: inherit;
-//        overflow: auto;
-//        max-height: none;
-//        position: fixed;
-//        width: 100%;
-//        height: 100%;
+        //        max-height: inherit;
+        //        overflow: auto;
+        //        max-height: none;
+        //        position: fixed;
+        //        width: 100%;
+        //        height: 100%;
 
         overflow: auto;
         max-height: 100%;
@@ -1875,7 +1895,7 @@ h2 {
       }
     }
   }
-
+  // perfect day page
   .time-of-day {
     padding-bottom: 20px;
     [class*="col-"]:nth-of-type(odd) {
@@ -1894,16 +1914,161 @@ h2 {
       margin-left: -25px;
     }
   }
+  // common
+  body {
+    padding-top: 40px;
+  }
 
-  .user-details {
-    > [class*="col-"] {
-      padding: 20px 0;
-      min-height: 140px;
-      &:first-child {
-        min-height: 0;
+  h2 {
+    font-size: 20px;
+  }
+  // header
+  .main-header {
+    .navbar {
+      min-height: 40px;
+      > .container-fluid .navbar-brand {
+        padding: 0;
+      }
+
+      > .container-fluid .navbar-nav {
+        padding-top: 0;
+      }
+    }
+
+    .navbar-toggle {
+      margin: 0 0 0 12px;
+      .icon-bar {
+        height: 2px;
+        width: 18px;
+      }
+    }
+
+    .guest-login.mobile svg {
+      height: 20px;
+      width: auto;
+      margin-top: 10px;
+    }
+
+    .nav-item-mobile svg {
+      height: 26px;
+      width: 26px;
+    }
+
+    .navbar-collapse {
+
+      > .nav > li > a,
+      > .nav .nav-item-mobile > a {
+        padding: 6px 15px;
+        font-size: 18px;
+      }
+
+      > .nav li + li.nav-item-mobile {
+        margin-top: 10px;
+        padding-top: 5px;
+      }
+
+      .navbar-right,
+      .navbar-right .guest-login {
+        margin-top: 0;
+      }
+      .navbar-right .guest-login {
+        padding: 5px 15px;
+        svg {
+          height: 26px;
+          width: 26px;
+        }
+
+      }
+    }
+
+    .navbar-fixed-top .navbar-collapse {
+      top: 40px;
+    }
+  }
+
+  .main-header .navbar > .container-fluid .navbar-brand .logo-mobile {
+    height: 24px;
+    width: auto;
+    margin-top: 8px;
+  }
+  // profile page
+  .profile-page-content {
+    padding: 15px 20px 0;
+  }
+
+  .user-info {
+    padding: 20px 20px 110px 20px;
+    h3 {
+      font-size: 11px;
+      margin: 0 0 10px;
+    }
+    p {
+      font-size: 10px;
+      line-height: 1.4;
+    }
+  }
+
+  .profile-wrap {
+    .user-photo {
+      border-bottom-width: 10px;
+    }
+    .user-details {
+      margin: 15px -20px 0;
+      .list-inline svg {
+        margin: 0;
+      }
+      .list-inline .fa {
+        font-size: 24px;
+        margin: 0;
+      }
+      > [class*="col-"] {
+        padding: 7px 0;
+        min-height: 74px;
+        font-size: 11px;
+        &:first-child {
+          min-height: 0;
+        }
+      }
+
+      strong {
+        font-size: 22px;
+        line-height: 1.3;
       }
     }
   }
+
+  // footer
+
+  .footer {
+    height: auto;
+    padding: 20px 0;
+
+    .about-block {
+      padding-top: 0;
+      .copyright {
+        font-size: 10px;
+      }
+    }
+    .footer-social {
+      padding-bottom: 60px;
+      li a {
+        margin: 0;
+      }
+    }
+    .logo-footer {
+      bottom: 55px;
+      p {
+        font-size: 12px;
+        padding: 0;
+      }
+
+      .logo {
+        width: 105px;
+        height: 15px;
+      }
+    }
+  }
+
 }
 
 /*------------------------------------*\
@@ -1933,3 +2098,4 @@ h2 {
     }
   }
 }
+
