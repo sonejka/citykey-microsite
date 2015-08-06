@@ -1947,10 +1947,13 @@ h2 {
       }
     }
 
-    .guest-login.mobile svg {
-      height: 20px;
-      width: auto;
-      margin-top: 10px;
+    .guest-login.mobile {
+      margin-right: 20px;
+      svg {
+        height: 20px;
+        width: auto;
+        margin-top: 10px;
+      }
     }
 
     .nav-item-mobile svg {
@@ -1997,7 +2000,15 @@ h2 {
   // profile page
   .profile-page-content {
     padding: 15px 20px 0;
+    .row.text-center {
+      padding: 0 10px;
+    }
+    .activity-item {
+      margin-bottom: 20px;
+    }
   }
+
+
 
   .user-info {
     padding: 20px 20px 110px 20px;
