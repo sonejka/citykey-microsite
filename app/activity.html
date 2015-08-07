@@ -45,7 +45,7 @@
               <img class="logo_main" alt="logo" width="80" height="45" src="images/logo1.png">
               <img class="logo-mobile" alt="logo" width="100" height="56" src="images/logo1_mobile.png">
             </a>
-            <a href="#" class="guest-login mobile">
+            <a data-toggle="modal" data-target="#login-modal" href="#" class="guest-login mobile">
               <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
 <g>
@@ -131,7 +131,7 @@
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a class="guest-login" href="#">
+              <li><a data-toggle="modal" data-target="#login-modal" class="guest-login" href="#">
                   <span>
                       <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
@@ -202,7 +202,7 @@
       </ul>
     </div>
     <button class="get-direction-btn btn btn-primary col-md-3 col-lg-3 col-xs-12"><i class="fa fa-map-marker"></i> Get
-      Direction
+      Directions
     </button>
 
 
@@ -313,7 +313,7 @@
             <h2>User Reviews</h2>
 
 
-            <div id='yelpwidget'></div>
+            <div id="yelpwidget"></div>
 
 
           </div>
@@ -378,7 +378,26 @@
         <a class="logo" href="#"></a>
       </div>
       <div class="col-sm-6 col-md-6 footer-nav">
-        <div class="col-sm-3 col-md-3 nav-list">
+        <div class="col-sm-4 col-md-4 nav-list">
+          <ul class="list-unstyled">
+
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">OUTDOOR</a></li>
+            <li><a href="#">WELLNESS</a></li>
+            <li><a href="#">CULINARY</a></li>
+            <li><a href="#">WINTER</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4 col-md-4 nav-list">
+          <ul class="list-unstyled">
+            <li><a href="#">LOCAL CULTURE</a></li>
+            <li><a href="#">FUN FOR KIDS</a></li>
+            <li><a href="#">PERFECT DAYS</a></li>
+            <li><a href="#">RESTAURANTS</a></li>
+            <li><a href="#">NIGHTLIFE</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4 col-md-4 nav-list">
           <ul class="list-unstyled">
             <li><a href="#">HOME</a></li>
             <li><a href="#">OUTDOOR</a></li>
@@ -387,24 +406,7 @@
             <li><a href="#">NIGHTLIFE</a></li>
           </ul>
         </div>
-        <div class="col-sm-3 col-md-3 nav-list">
-          <ul class="list-unstyled">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">OUTDOOR</a></li>
-            <li><a href="#">INDOOR</a></li>
-            <li><a href="#">RESTAURANTS</a></li>
-            <li><a href="#">NIGHTLIFE</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3 col-md-3 nav-list">
-          <ul class="list-unstyled">
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SOMETHING</a></li>
-            <li><a href="#">HOTEL LOGIN</a></li>
-            <li><a href="#">TRAVELER LOGIN</a></li>
-          </ul>
-        </div>
+
 
       </div>
       <div class="col-xs-12 col-sm-3 col-md-4 about-block">
@@ -501,22 +503,43 @@
 
           <div class="row">
 
-            <div class="form-group col-md-6">
-              <label class="sr-only" for="Name1">Name</label>
-              <input type=text" class="form-control" id="name1" placeholder="Name">
+            <div class="form-group col-md-12">
+              <label for="name1">Subject </label>
+              <input type=text" class="form-control" id="name1" placeholder="Subject">
             </div>
-            <div class="form-group col-md-6">
-              <label class="sr-only" for="email1">Email address</label>
-              <input type="email" class="form-control" id="email1" placeholder="Email">
-            </div>
+
           </div>
           <div class="row">
+            <div class="form-group col-md-6">
+              <label for="">Message type </label>
+
+              <select class="form-control">
+
+                <option>Message</option>
+                <option>Reservation</option>
+                <option>Inquery</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="">Urgency</label>
+
+              <div class="select"><select class="form-control">
+                <option>not urgent</option>
+                <option>now</option>
+                <option>tomorrow</option>
+                <option>in a few_days</option>
+              </select></div>
+            </div>
+          </div>
+
+          <div class="row">
             <div class="form-group col-md-12">
-              <label class="sr-only" for="textarea1">What is your question?</label>
+              <label for="textarea1">Message/request text</label>
                             <textarea name="textarea1" id="textarea1" class="form-control" rows="3"
                                       placeholder="What is your question?"></textarea>
             </div>
           </div>
+
 
           <div class="row text-center">
             <button type="submit" class="btn btn-primary">Submit Your QUESTION</button>
@@ -530,6 +553,137 @@
     </div>
   </div>
 </div>
+
+<!-- Login Modal -->
+<div class="modal fade login-modal" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+          aria-hidden="true">&times;</span></button>
+
+      </div>
+      <div class="modal-body">
+
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active col-xs-6"><a href="#sign-in" aria-controls="sign-in" role="tab"
+                                                             data-toggle="tab">Sign in</a></li>
+          <li role="presentation" class="col-xs-6"><a href="#new-account" aria-controls="new-account" role="tab"
+                                                      data-toggle="tab">New account</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="sign-in">
+
+
+            <div class="forgot-pass-form closed">
+
+              <p>Lost your password? Please enter your email address. <br/>You will receive a link to create a new
+                password.</p>
+
+              <form>
+                <div class="form-group">
+                  <label class="sr-only" for="name2">Email </label>
+                  <input type="email" class="form-control" id="name2" placeholder="Email@em.al">
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Reset password</button>
+                </div>
+              </form>
+
+
+              <div class="forgot-pass"><a class="back-to-login" href="#">Back to log-in</a></div>
+            </div>
+
+
+            <div class="sign-in-form">
+              <form>
+
+
+                <div class="form-group">
+                  <label class="sr-only" for="name3">Email </label>
+                  <input type="email" class="form-control" id="name3" placeholder="Email@em.al">
+                </div>
+
+
+                <div class="form-group hide-pass-option">
+                  <label class="sr-only" for="name4">Password </label>
+                  <input type="password" class="form-control" id="name4" placeholder="password">
+                  <a href="#0" class="hide-password">Show</a>
+                </div>
+
+
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Remember me
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <a href="#">Login with Facebook</a>
+                </div>
+
+
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+              </form>
+
+              <div class="forgot-pass"><a class="forgot-pass-btn" href="#">Forgot your password?</a></div>
+
+            </div>
+
+
+          </div>
+
+
+          <div role="tabpanel" class="tab-pane" id="new-account">
+
+
+            <form>
+
+
+              <div class="form-group">
+                <label class="sr-only" for="name5">Email </label>
+                <input type="email" class="form-control" id="name5" placeholder="Email@em.al">
+              </div>
+
+
+              <div class="form-group hide-pass-option">
+                <label class="sr-only" for="name6">Password </label>
+                <input type="password" class="form-control" id="name6" placeholder="password">
+                <a href="#0" class="hide-password">Show</a>
+              </div>
+
+
+              <div class="form-group hide-pass-option">
+                <label class="sr-only" for="name7">Password Confirmation </label>
+                <input type="password" class="form-control" id="name7" placeholder="Password Confirmation">
+                <a href="#0" class="hide-password">Show</a>
+              </div>
+
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Create Account</button>
+              </div>
+            </form>
+
+
+          </div>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!--SHARE Modal -->
 <div class="modal fade share-modal" id="share-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -620,9 +774,6 @@
   x.parentNode.insertBefore(s, x);
 })();</script>
 
-<!-- build:js scripts/pongstagr.js -->
-<script src="pongstagr/pongstagr.am.js"></script>
-<!-- endbuild -->
 
 <!-- build:js scripts/main.js -->
 <script src="scripts/main.js"></script>
