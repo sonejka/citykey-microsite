@@ -223,13 +223,6 @@ h2 {
   background: url("../images/pattern_bg.jpg");
 }
 
-.row.no-padd {
-  margin: 0 -25px;
-}
-.row.no-padd > div {
-  padding: 0 25px;
-}
-
 /*------------------------------------*\
     SVG ICONS
 \*------------------------------------*/
@@ -1113,7 +1106,7 @@ h2 {
   .sign-in-form.closed {
     display: none;
   }
-  
+
   .btn-primary {
     width: 100%;
   }
@@ -1376,6 +1369,11 @@ h2 {
       }
     }
   }
+
+  .content > .row {
+    padding: 0 25px;
+  }
+
 }
 
 //Media quaries
@@ -1400,10 +1398,6 @@ h2 {
   }
   .user-details .list-inline .icon-citykey {
     width: 34px;
-  }
-
-  .row.no-padd {
-    margin: 0 -15px;
   }
 
 }
@@ -1906,6 +1900,9 @@ h2 {
   //category page
   .wide-section, .wide-section + h2 {
     display: none;
+  }
+  .content-with-sidebar.category .content > .row {
+    padding: 0;
   }
 
   .maps .info-bubble {
