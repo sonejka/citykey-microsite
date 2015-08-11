@@ -2013,12 +2013,6 @@ h2 {
   //category page
 
   .content-with-sidebar.category .article {
-    .heading-wrapper.category .heading-content .heading-content-icon {
-      width: 26px;
-      height: 35px;
-      background-size: 100%;
-    }
-
     .article-cont {
       h3 {
         font-size: 24px;
@@ -2027,6 +2021,11 @@ h2 {
         font-size: 14px;
       }
     }
+  }
+  .heading-wrapper.category .heading-content .heading-content-icon {
+    width: 26px;
+    height: 35px;
+    background-size: 100%;
   }
   // perfect day page
   .time-of-day {

@@ -44,12 +44,13 @@
     .form-control{
       font-size: 10px;
       padding-left: 10px;
-      height: 34px;
+      height: 40px;
+      background-color: $color-white;
     }
     .input-group-addon input[type="submit"]{
       width: 83px;
       font-size: 10px;
-      height: 34px;
+      height: 40px;
     }
   }
 }
