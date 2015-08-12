@@ -1983,8 +1983,8 @@ h2 {
 
   .heading-wrapper .heading-content h1,
   .heading-wrapper.category .heading-content h1,
-  .category.heading-activity-pic .heading-content h1,
-  .category.heading-perfect-day .heading-content h1,
+  .heading-activity-pic .heading-content h1,
+  .heading-perfect-day .heading-content h1,
   .content-with-sidebar.category .category.wide-section .heading-content h1 {
     font-size: 20px;
   }
@@ -1996,11 +1996,12 @@ h2 {
   }
 
   .heading-wrapper.category .heading-content p,
-  .category.heading-activity-pic .heading-content p,
-  .category.heading-perfect-day .heading-content p,
+  .heading-activity-pic .heading-content p,
+  .heading-perfect-day .heading-content p,
   .content-with-sidebar.category .category.wide-section .heading-content p {
     font-size: 15px;
-    max-width: none;
+    max-width: 100%;
+    margin: 0;
   }
 
   .baloon-btn {
