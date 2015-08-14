@@ -1508,7 +1508,8 @@ h2 {
       img {
         position: absolute;
         left: 0;
-        margin-left: calc(100% / 2.5);
+        right: 0;
+        margin: 0 auto;
       }
     }
     .guest-login {
@@ -1976,10 +1977,12 @@ h2 {
   //home page
 
   .heading-wrapper,
-  .heading-activity-pic,
   .heading-perfect-day,
   .content-with-sidebar.category .wide-section {
     min-height: 400px;
+  }
+  .heading-activity-pic{
+    min-height: 300px;
   }
 
   .heading-wrapper .heading-content h1,
