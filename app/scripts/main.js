@@ -75,6 +75,24 @@ window.onload = function () {
     $password_field.putCursorAtEnd();
   });
 
+  //jQuery mmenu initialize
+    $("#slide-off-menu").mmenu({
+      // options
+    }, {
+      // configuration
+      offCanvas: {
+        pageNodetype: "div",
+        classNames: {
+          selected: "active"
+        }
+      }
+    });
+    var API = $("#slide-off-menu").data( "mmenu" );
+
+    $(".navbar-toggle").click(function() {
+      API.open();
+    });
+
 }
 
 

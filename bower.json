@@ -2,7 +2,8 @@
   "name": "citykey-microsite",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "~3.3.5"
+    "bootstrap-sass": "~3.3.5",
+    "jQuery.mmenu": "~5.3.4"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -10,6 +11,12 @@
         "assets/stylesheets/_bootstrap.scss",
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
+      ]
+    },
+    "jQuery.mmenu": {
+      "main": [
+        "src/scss/jquery.mmenu.oncanvas.scss",
+        "src/js/jquery.mmenu.oncanvas.js"
       ]
     }
   },
