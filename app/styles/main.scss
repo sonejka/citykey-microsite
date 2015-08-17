@@ -1347,6 +1347,7 @@ h2 {
 }
 .heading-wrapper.index-category{
   background: url("../images/heading_bg/pic7.jpg") no-repeat center;
+  background-size: cover;
   .heading-content .heading-content-icon {
     display: inline-block;
     width: 46px;
@@ -1377,6 +1378,26 @@ h2 {
       .btn-primary {
         font-size: $font-size-small;
         padding: 6px 30px 7px 35px;
+      }
+    }
+  }
+  .wide-section.with-descr{
+    @extend .article;
+    p{
+      display: none;
+    }
+    .heading-content{
+      z-index: 2;
+    &:hover{
+        p{
+          display: block;
+        }
+        .btn-primary{
+          color: $btn-info-color;
+          background-color: $btn-info-bg;
+          border-color: $btn-info-border;
+
+        }
       }
     }
   }
