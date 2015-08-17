@@ -1345,6 +1345,15 @@ h2 {
     }
   }
 }
+.heading-wrapper.index-category{
+  background: url("../images/heading_bg/pic7.jpg") no-repeat center;
+  .heading-content .heading-content-icon {
+    display: inline-block;
+    width: 46px;
+    height: 48px;
+    background: url("../images/icons/index_caterory_heading_icon.png") no-repeat center;
+  }
+}
 
 .content-with-sidebar.category {
   .wide-section {
