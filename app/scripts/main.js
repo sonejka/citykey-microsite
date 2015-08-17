@@ -15,7 +15,6 @@ window.onload = function () {
     $('.sign-in-form').removeClass('closed');
   });
 
-
   $('.sidebar-nav-wrap, .shadow-box').mouseenter(function () {
     $(this).addClass('mouse_over');
     $(".content-with-sidebar").addClass("sidebar-opened");
