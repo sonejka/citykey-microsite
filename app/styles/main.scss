@@ -1659,7 +1659,7 @@ h2 {
     background: url("../images/heading_bg/mob_menu.png") no-repeat center;
     background-size: cover;
     .mm-navbar{
-      border-color: $color-copy-gray2;
+      border-bottom:1px solid $color-copy-gray2;
     }
     .mm-title{
       font-weight: 900;
