@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "jQuery.mmenu": "~5.3.4"
+    "jQuery.mmenu": "~5.4.0"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -15,8 +15,9 @@
     },
     "jQuery.mmenu": {
       "main": [
-        "src/scss/jquery.mmenu.oncanvas.scss",
-        "src/js/jquery.mmenu.oncanvas.js"
+        "src/core/css/jquery.mmenu.scss",
+        "src/core/js/jquery.mmenu.oncanvas.js",
+        "src/addons/js/jquery.mmenu.offcanvas.js"
       ]
     }
   },

@@ -80,16 +80,10 @@ window.onload = function () {
     }, {
       // configuration
       offCanvas: {
-        pageNodetype: "div",
         classNames: {
           selected: "active"
         }
       }
-    });
-    var API = $("#slide-off-menu").data( "mmenu" );
-
-    $(".navbar-toggle").click(function() {
-      API.open();
     });
 
 }
