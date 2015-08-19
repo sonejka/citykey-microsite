@@ -1,7 +1,6 @@
 @import "_variables";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
 @import "../bower_components/jQuery.mmenu/src/core/css/jquery.mmenu.scss";
-
 @import "keyframes";
 @import "base";
 @import "form";
@@ -730,15 +729,6 @@ h2 {
 }
 
 /*------------------------------------*\
-   SHARE BUTTON
-\*------------------------------------*/
-.share-modal {
-  h4 {
-    font-size: 28px;
-  }
-}
-
-/*------------------------------------*\
     CUSTOMIZED YELP WIDGET
 \*------------------------------------*/
 #yelpwidget {
@@ -1177,14 +1167,6 @@ h2 {
   }
 }
 
-.share-modal .modal-dialog {
-  transform: translate(-50%, -50%) !important;
-  top: 40% !important;;
-  left: 50% !important;;
-  position: absolute !important;
-  min-width: 280px;
-}
-
 .modal-content {
   color: $color-light-gray4;
 }
@@ -1346,7 +1328,8 @@ h2 {
     }
   }
 }
-.heading-wrapper.index-category{
+
+.heading-wrapper.index-category {
   background: url("../images/heading_bg/pic7.jpg") no-repeat center;
   background-size: cover;
   .heading-content .heading-content-icon {
@@ -1382,18 +1365,18 @@ h2 {
       }
     }
   }
-  .wide-section.with-descr{
+  .wide-section.with-descr {
     @extend .article;
-    p{
+    p {
       display: none;
     }
-    .heading-content{
+    .heading-content {
       z-index: 2;
-    &:hover{
-        p{
+      &:hover {
+        p {
           display: block;
         }
-        .btn-primary{
+        .btn-primary {
           color: $btn-info-color;
           background-color: $btn-info-bg;
           border-color: $btn-info-border;
@@ -1655,33 +1638,33 @@ h2 {
     display: inline-block;
   }
   //jQuery mmemu customizing
-  .mm-menu{
+  .mm-menu {
     background: url("../images/heading_bg/mob_menu.png") no-repeat center;
     background-size: cover;
-    .mm-navbar{
-      border-bottom:1px solid $color-copy-gray2;
+    .mm-navbar {
+      border-bottom: 1px solid $color-copy-gray2;
     }
-    .mm-title{
+    .mm-title {
       font-weight: 900;
     }
-    .mm-listview{
-      > li > a, > li > span{
+    .mm-listview {
+      > li > a, > li > span {
         color: $color-copy-gray2;
         padding-top: 8px;
         padding-bottom: 8px;
       }
-      .active > a{
+      .active > a {
         color: $color-accent;
         font-weight: bolder;
       }
-      .devider > a{
+      .devider > a {
         padding-top: 18px;
         margin-top: 18px;
       }
     }
-    .devider{
+    .devider {
       position: relative;
-      &:before{
+      &:before {
         content: "";
         display: block;
         position: absolute;
@@ -1711,14 +1694,9 @@ h2 {
     }
   }
   .mm-listview > li:not(.mm-divider):after,
-  .mm-listview .mm-next:before{
+  .mm-listview .mm-next:before {
     border: none;
   }
-
-
-
-
-
 
   //heading text block
   .heading-wrapper {
@@ -1729,18 +1707,6 @@ h2 {
   // activity page
   .read-more-modal .list-inline li {
     padding: 10px 0 0;
-  }
-
-  .share-modal {
-    h4 {
-      font-size: 26px;
-    }
-    li {
-      display: block;
-      .fb-share-button {
-        margin: 0;
-      }
-    }
   }
 
   .bordered-column-activity .right-border {
@@ -2112,9 +2078,11 @@ h2 {
   .heading-perfect-day,
   .content-with-sidebar.category .wide-section {
     min-height: 400px;
+    margin-top: 40px;
   }
   .heading-activity-pic {
     min-height: 300px;
+    margin-top: 40px;
   }
 
   .heading-wrapper .heading-content h1,
@@ -2229,7 +2197,10 @@ h2 {
     }
 
     .guest-login.mobile {
-      margin-right: 20px;
+      margin-right: 0;
+      position: absolute;
+      right: 20px;
+      top: 0;
       svg {
         height: 20px;
         width: auto;
